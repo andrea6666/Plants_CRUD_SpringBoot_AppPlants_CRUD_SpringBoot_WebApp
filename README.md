@@ -11,6 +11,7 @@
 ## Here you can see the application in use:
 ### Users can view a list of plants, create new plants, edit existing ones, and delete plants. Plants are associated with attributes such as name, category, watering days, instructions, and an image. The application validates form input and handles image data conversion. Watering actions can be updated, and instructions for each plant can be read. Data is persisted in a MySQL database, and the application uses Spring Data JPA for database interactions.
 
-https://github.com/andrea6666/Plants_CRUD_SpringBoot_App/assets/45822712/dc94aca3-3bf0-4bcf-8697-19a1ad5aa46a
+https://github.com/andrea6666/Plants_CRUD_SpringBoot_WebApp/assets/45822712/fd8d65fb-c915-488c-8b26-3c2dbb08827a
+
 
 
