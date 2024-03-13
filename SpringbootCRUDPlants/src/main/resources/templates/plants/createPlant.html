@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plants</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="col-md-8 mx-auto rounded border p-4 m-4">
+		<h2 class="text-center mb-5">Add Plant</h2>
+		<form method="post" enctype="multipart/form-data" th:object="${plantDto}">
+			
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Name</label>
+				<div class="col-sm-8">
+					<input class="form-control" th:field="${plantDto.name}" autocomplete="off">
+					<p th:if="${#fields.hasErrors('name')}" th:errorclass="text-danger" th:errors="${plantDto.name}"></p>
+				</div>
+			</div>
+			
+<!--			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Water the Plant</label>
+				<div class="col-sm-8">
+					<input class="form-control" th:field="${plantDto.wateringAction}">
+					<p th:if="${#fields.hasErrors('wateringAction')}" th:errorclass="text-danger" th:errors="${plantDto.wateringAction}"></p>
+				</div>
+			</div>-->
+			
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Category</label>
+				<div class="col-sm-8">
+					<select class="form-select" th:field="${plantDto.category}">
+						<option value="Other">Other</option>
+						<option value="Grasses">Grasses</option>
+						<option value="Trees">Trees</option>
+						<option value="Groundcovers">Groundcovers</option>
+						<option value="Ferns">Ferns</option>
+						<option value="Aquatic plants">Aquatic plants</option>
+						<option value="Angiosperms">Angiosperms</option>
+					</select>
+					<p th:if="${#fields.hasErrors('category')}" th:errorclass="text-danger" th:errors="${plantDto.category}"></p>
+				</div>
+			</div>
+			
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Watering Days</label>
+				<div class="col-sm-8">
+					<input class="form-control" th:field="${plantDto.wateringDays}">
+					<p th:if="${#fields.hasErrors('wateringDays')}" th:errorclass="text-danger" th:errors="${plantDto.wateringDays}"></p>
+				</div>
+			</div>
+			
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Instructions</label>
+				<div class="col-sm-8">
+					<textarea class="form-control" th:field="${plantDto.instructions}"></textarea>
+					<p th:if="${#fields.hasErrors('instructions')}" th:errorclass="text-danger" th:errors="${plantDto.instructions}"></p>
+				</div>				
+			</div>
+			
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Image</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="file" th:field="${plantDto.imageFile}">
+					<p th:if="${#fields.hasErrors('imageFile')}" th:errorclass="text-danger"
+					 th:errors="${plantDto.imageFile}"></p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="offset-sm-4 col-sm-4 d-grid">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+				<div class="col sm-4 d-grid">
+					<a class="btn btn-outline-primary" href="/plants" role="button">Cancel</a>
+				</div>
+			</div>
+			
+			
+		</form>
+	</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
